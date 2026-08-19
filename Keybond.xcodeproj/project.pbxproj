@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2A42920CD60DB9E5E22A58C /* KeybondApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459DD91331C208B826DC1DDB /* KeybondApp.swift */; };
+		12F3258D25E7CE336451C33D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F1748F068DEAE0A61BE4D6 /* ContentView.swift */; };
+		1BB1A6A5B14A6C8B08F220B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D62EEF407F32C02EBB8DE6F /* Assets.xcassets */; };
+		C3D025AD15F0F1E843B4DF41 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685E16F5A2E7B455BB574BF /* KeyboardViewController.swift */; };
+		7C63032E3210376519A2EE97 /* KeyboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C71FE0E9B5355ADD0C969 /* KeyboardModel.swift */; };
+		BA0A8BFB9E5B74B4A589FDEC /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1982933192721845F77979B9 /* KeyboardView.swift */; };
+		D3A32ED5F35A3BF51D7C2950 /* KeyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A41D684DF2D883FC2FFB45 /* KeyButtonView.swift */; };
+		A28B1D50ACD2284603ABA6AA /* KeyLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BAE7C088C3F093BACA4F51 /* KeyLayouts.swift */; };
+		2BF28E6A0CB0EAA231D1E4BD /* EmojiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF6A8F534E75F4B127689C3 /* EmojiData.swift */; };
+		8E56C26667D5DF0896653CFF /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DCC18DC7E25AB6336FB716 /* EmojiPickerView.swift */; };
+		3DDB5458A1BF0FCE5E8BFEFC /* WordPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F1662FEEBF8EEC457A735C /* WordPredictor.swift */; };
+		ED0BCC31A3AC107F6769493D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF7367B31D75212D5C4DE7B /* Theme.swift */; };
+		74DDFF2F40209F54B035A471 /* words_en.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0902E86F11F7E1A3254F67A0 /* words_en.txt */; };
+		0BDA8CF22313DFA9EBEDAB9A /* words_th.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9D3ED3A044563E5A9DA1F6A2 /* words_th.txt */; };
+		C8BF9A31F17180833A92A65A /* KeybondKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EAD7512BDEE9069FF827C8B5 /* KeybondKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD9FF8AC44F2E3C1EC0A8F00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 913968FEC062BADF8FFDC3DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6AAEA3EFD5BB21607862F37;
+			remoteInfo = KeybondKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9C10B30C18EE95AF69F804A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C8BF9A31F17180833A92A65A /* KeybondKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A265BCA99D53736979E53ED /* Keybond.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Keybond.app; sourceTree = "<group>"; };
+		EAD7512BDEE9069FF827C8B5 /* KeybondKeyboard.appex */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.app-extension"; path = KeybondKeyboard.appex; sourceTree = "<group>"; };
+		459DD91331C208B826DC1DDB /* KeybondApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybondApp.swift; sourceTree = "<group>"; };
+		F9F1748F068DEAE0A61BE4D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8D62EEF407F32C02EBB8DE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CA0A2F8B71F204FB43E3468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8685E16F5A2E7B455BB574BF /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		3A3C71FE0E9B5355ADD0C969 /* KeyboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModel.swift; sourceTree = "<group>"; };
+		1982933192721845F77979B9 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		54A41D684DF2D883FC2FFB45 /* KeyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyButtonView.swift; sourceTree = "<group>"; };
+		81BAE7C088C3F093BACA4F51 /* KeyLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyLayouts.swift; sourceTree = "<group>"; };
+		6BF6A8F534E75F4B127689C3 /* EmojiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiData.swift; sourceTree = "<group>"; };
+		45DCC18DC7E25AB6336FB716 /* EmojiPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
+		66F1662FEEBF8EEC457A735C /* WordPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPredictor.swift; sourceTree = "<group>"; };
+		7EF7367B31D75212D5C4DE7B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6C6D009481E272F0483718F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0902E86F11F7E1A3254F67A0 /* words_en.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words_en.txt; sourceTree = "<group>"; };
+		9D3ED3A044563E5A9DA1F6A2 /* words_th.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words_th.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		928862BC857A2B2A5075E96A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16FBF0FDA351BC12872C8697 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AABB03A38E1DEEF6DD68E96 = {
+			isa = PBXGroup;
+			children = (
+				13B2D87416E5BC2A40302E7D /* Keybond */,
+				B683C787ED57C70BD365A6BB /* KeybondKeyboard */,
+				A41461B135CCADCF4A068DB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A41461B135CCADCF4A068DB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A265BCA99D53736979E53ED /* Keybond.app */,
+				EAD7512BDEE9069FF827C8B5 /* KeybondKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13B2D87416E5BC2A40302E7D /* Keybond */ = {
+			isa = PBXGroup;
+			children = (
+				459DD91331C208B826DC1DDB /* KeybondApp.swift */,
+				F9F1748F068DEAE0A61BE4D6 /* ContentView.swift */,
+				8D62EEF407F32C02EBB8DE6F /* Assets.xcassets */,
+				7CA0A2F8B71F204FB43E3468 /* Info.plist */,
+			);
+			path = Keybond;
+			sourceTree = "<group>";
+		};
+		B683C787ED57C70BD365A6BB /* KeybondKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8685E16F5A2E7B455BB574BF /* KeyboardViewController.swift */,
+				3A3C71FE0E9B5355ADD0C969 /* KeyboardModel.swift */,
+				1982933192721845F77979B9 /* KeyboardView.swift */,
+				54A41D684DF2D883FC2FFB45 /* KeyButtonView.swift */,
+				81BAE7C088C3F093BACA4F51 /* KeyLayouts.swift */,
+				6BF6A8F534E75F4B127689C3 /* EmojiData.swift */,
+				45DCC18DC7E25AB6336FB716 /* EmojiPickerView.swift */,
+				66F1662FEEBF8EEC457A735C /* WordPredictor.swift */,
+				7EF7367B31D75212D5C4DE7B /* Theme.swift */,
+				3E7AC7D8A68F29570C475672 /* Resources */,
+				6C6D009481E272F0483718F1 /* Info.plist */,
+			);
+			path = KeybondKeyboard;
+			sourceTree = "<group>";
+		};
+		3E7AC7D8A68F29570C475672 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0902E86F11F7E1A3254F67A0 /* words_en.txt */,
+				9D3ED3A044563E5A9DA1F6A2 /* words_th.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D74E68CC0B30F6B098379D5 /* Keybond */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7186AA16EF9EE90B2891B40 /* Build configuration list for PBXNativeTarget "Keybond" */;
+			buildPhases = (
+				2695C94ED77460B7564F89B1 /* Sources */,
+				928862BC857A2B2A5075E96A /* Frameworks */,
+				2DA4AEDECF5C63A0B270C22B /* Resources */,
+				C9C10B30C18EE95AF69F804A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CBA732C94227F3130A30D66 /* PBXTargetDependency */,
+			);
+			name = Keybond;
+			productName = Keybond;
+			productReference = 3A265BCA99D53736979E53ED /* Keybond.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6AAEA3EFD5BB21607862F37 /* KeybondKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CAAEFC4FE4830CD23916602 /* Build configuration list for PBXNativeTarget "KeybondKeyboard" */;
+			buildPhases = (
+				ACCBD98EAA365C80757E3A65 /* Sources */,
+				16FBF0FDA351BC12872C8697 /* Frameworks */,
+				F05484ED0B5F3DF7E784B9F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeybondKeyboard;
+			productName = KeybondKeyboard;
+			productReference = EAD7512BDEE9069FF827C8B5 /* KeybondKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		913968FEC062BADF8FFDC3DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2D74E68CC0B30F6B098379D5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					B6AAEA3EFD5BB21607862F37 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = AD5E2334901FFDE4C45BD4BB /* Build configuration list for PBXProject "Keybond" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4AABB03A38E1DEEF6DD68E96;
+			productRefGroup = A41461B135CCADCF4A068DB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D74E68CC0B30F6B098379D5 /* Keybond */,
+				B6AAEA3EFD5BB21607862F37 /* KeybondKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DA4AEDECF5C63A0B270C22B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB1A6A5B14A6C8B08F220B6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F05484ED0B5F3DF7E784B9F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DDFF2F40209F54B035A471 /* words_en.txt in Resources */,
+				0BDA8CF22313DFA9EBEDAB9A /* words_th.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2695C94ED77460B7564F89B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12F3258D25E7CE336451C33D /* ContentView.swift in Sources */,
+				C2A42920CD60DB9E5E22A58C /* KeybondApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCBD98EAA365C80757E3A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D025AD15F0F1E843B4DF41,
+				7C63032E3210376519A2EE97,
+				BA0A8BFB9E5B74B4A589FDEC,
+				D3A32ED5F35A3BF51D7C2950,
+				A28B1D50ACD2284603ABA6AA,
+				2BF28E6A0CB0EAA231D1E4BD,
+				8E56C26667D5DF0896653CFF,
+				3DDB5458A1BF0FCE5E8BFEFC,
+				ED0BCC31A3AC107F6769493D,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CBA732C94227F3130A30D66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6AAEA3EFD5BB21607862F37 /* KeybondKeyboard */;
+			targetProxy = AD9FF8AC44F2E3C1EC0A8F00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC7AD34351EAE71EDB9461C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F0174124D87F33C760E73DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A3F66B5F9158F1037DE4F8CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Keybond/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keybond.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3042EC1F5CB0BA34D4AFFDC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Keybond/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keybond.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1A65F96EEC328CB5725AED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KeybondKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keybond.app.KeybondKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9590903FF5AD27A88352DC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KeybondKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keybond.app.KeybondKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD5E2334901FFDE4C45BD4BB /* Build configuration list for PBXProject "Keybond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7AD34351EAE71EDB9461C4 /* Debug */,
+				9F0174124D87F33C760E73DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7186AA16EF9EE90B2891B40 /* Build configuration list for PBXNativeTarget "Keybond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F66B5F9158F1037DE4F8CE /* Debug */,
+				3042EC1F5CB0BA34D4AFFDC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CAAEFC4FE4830CD23916602 /* Build configuration list for PBXNativeTarget "KeybondKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1A65F96EEC328CB5725AED9 /* Debug */,
+				B9590903FF5AD27A88352DC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 913968FEC062BADF8FFDC3DF /* Project object */;
+}
