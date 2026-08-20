@@ -1,5 +1,6 @@
 package com.keybond.android.ime
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.clickable
@@ -302,6 +303,7 @@ internal fun CharacterKey(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 internal fun SpecialKey(
     modifier: Modifier = Modifier,
