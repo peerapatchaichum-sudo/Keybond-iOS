@@ -1,9 +1,13 @@
 package com.keybond.android.ime
 
+import android.graphics.Color
 import android.inputmethodservice.InputMethodService
+import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.TextView
 import androidx.compose.ui.platform.ComposeView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
@@ -13,6 +17,8 @@ import androidx.savedstate.SavedStateRegistry
 import androidx.savedstate.SavedStateRegistryController
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
+import java.io.PrintWriter
+import java.io.StringWriter
 
 /**
  * The keyboard extension itself. Hosts a Compose UI inside the IME's input
@@ -27,37 +33,71 @@ class KeybondInputMethodService :
     SavedStateRegistryOwner,
     KeyboardActionHandler {
 
+    companion object {
+        private const val TAG = "KeybondIME"
+    }
+
     private val lifecycleRegistry = LifecycleRegistry(this)
     private val savedStateRegistryController = SavedStateRegistryController.create(this)
 
     override val lifecycle: Lifecycle get() = lifecycleRegistry
     override val savedStateRegistry: SavedStateRegistry get() = savedStateRegistryController.savedStateRegistry
 
-    private lateinit var state: KeyboardState
+    private var state: KeyboardState? = null
 
     override fun onCreate() {
         savedStateRegistryController.performRestore(null)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
         super.onCreate()
-        state = KeyboardState(WordPredictor(this))
-        state.actionHandler = this
+        try {
+            val newState = KeyboardState(WordPredictor(this))
+            newState.actionHandler = this
+            state = newState
+        } catch (t: Throwable) {
+            Log.e(TAG, "Failed to initialize KeyboardState", t)
+        }
     }
 
     override fun onCreateInputView(): View {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_RESUME)
-        return ComposeView(this).apply {
-            setViewTreeLifecycleOwner(this@KeybondInputMethodService)
-            setViewTreeSavedStateRegistryOwner(this@KeybondInputMethodService)
-            setContent {
-                KeyboardRoot(state = state)
+        return try {
+            val currentState = state ?: error("KeyboardState was never initialized")
+            ComposeView(this).apply {
+                setViewTreeLifecycleOwner(this@KeybondInputMethodService)
+                setViewTreeSavedStateRegistryOwner(this@KeybondInputMethodService)
+                setContent {
+                    KeyboardRoot(state = currentState)
+                }
             }
+        } catch (t: Throwable) {
+            Log.e(TAG, "Failed to create keyboard view", t)
+            crashFallbackView(t)
+        }
+    }
+
+    private fun crashFallbackView(t: Throwable): View {
+        val writer = StringWriter()
+        t.printStackTrace(PrintWriter(writer))
+        return TextView(this).apply {
+            text = "Keybond crashed:\n\n$writer"
+            setTextColor(Color.WHITE)
+            setBackgroundColor(Color.BLACK)
+            textSize = 10f
+            gravity = Gravity.START
+            setPadding(24, 24, 24, 24)
+            setHorizontallyScrolling(true)
+            isVerticalScrollBarEnabled = true
         }
     }
 
     override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
         super.onStartInputView(info, restarting)
-        state.resetForNewInputSession()
+        try {
+            state?.resetForNewInputSession()
+        } catch (t: Throwable) {
+            Log.e(TAG, "resetForNewInputSession failed", t)
+        }
     }
 
     override fun onDestroy() {
