@@ -44,3 +44,19 @@ jobs:
           name: keybond-debug-apk
           path: KeybondAndroid/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+      - name: Publish APK to ci-artifacts branch
+        working-directory: /tmp
+        run: |
+          rm -rf apk-publish
+          mkdir apk-publish
+          cp "$GITHUB_WORKSPACE"/KeybondAndroid/app/build/outputs/apk/debug/*.apk apk-publish/keybond-debug.apk
+          cd apk-publish
+          git init -q
+          git checkout -q -b ci-artifacts
+          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git add keybond-debug.apk
+          git commit -q -m "APK from ${{ github.sha }}"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin HEAD:ci-artifacts
