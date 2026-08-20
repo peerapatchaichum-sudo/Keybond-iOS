@@ -208,7 +208,7 @@ private fun BottomRow(state: KeyboardState) {
             modifier = Modifier.weight(1.4f),
             text = if (state.page == KeyboardPage.LETTERS) "123" else "ABC"
         ) {
-            state.setPage(if (state.page == KeyboardPage.LETTERS) KeyboardPage.NUMBERS else KeyboardPage.LETTERS)
+            state.showPage(if (state.page == KeyboardPage.LETTERS) KeyboardPage.NUMBERS else KeyboardPage.LETTERS)
         }
 
         GlobeKey(state = state, modifier = Modifier.weight(1.2f))

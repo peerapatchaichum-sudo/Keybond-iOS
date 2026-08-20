@@ -104,7 +104,7 @@ class KeyboardState(private val predictor: WordPredictor) {
         shiftState = ShiftState.CAPS_LOCKED
     }
 
-    fun setPage(newPage: KeyboardPage) {
+    fun showPage(newPage: KeyboardPage) {
         page = newPage
     }
 
