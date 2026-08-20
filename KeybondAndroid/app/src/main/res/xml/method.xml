@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.keybond.android.ui.MainActivity">
+    <subtype
+        android:icon="@mipmap/ic_launcher"
+        android:imeSubtypeLocale="en_US"
+        android:imeSubtypeMode="keyboard"
+        android:label="@string/subtype_english"
+        android:subtypeId="1" />
+    <subtype
+        android:icon="@mipmap/ic_launcher"
+        android:imeSubtypeLocale="th_TH"
+        android:imeSubtypeMode="keyboard"
+        android:label="@string/subtype_thai"
+        android:subtypeId="2" />
+</input-method>
